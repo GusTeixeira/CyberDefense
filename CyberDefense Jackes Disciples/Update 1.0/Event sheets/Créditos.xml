@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Créditos</name>
+    <events>
+        <event-block sid="255347576364418">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="915659913445709" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="975154014794290" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="394445193051356" type="ThankYouForPlaying">
+                    <param id="0" name="Opacity">100 - (10 * time)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="229636410667063">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="947850332486434" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-7" name="Compare time" sid="228174106825720" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="359677483764594" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="840696820793726">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="196931305037792" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="895820659546269" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="0" name="Play" sid="427163459892125" type="Áudio">
+                    <param id="0" name="Audio file">Créditos</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

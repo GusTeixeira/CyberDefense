@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Over</name>
+    <events>
+        <event-block sid="593420566503872">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="478154135869588" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="771267443463582" type="Áudio">
+                    <param id="0" name="Audio file">GameOverSelect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="243170547644337" type="GameOverYes">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="281347551744322" type="GameOverNo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909814583427681">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="406788554101278" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="564872713304587" type="GameOverNo" />
+                <condition id="-9" inverted="1" name="Is visible" sid="157235707428736" type="GameOverYes" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="406742923135735" type="Áudio">
+                    <param id="0" name="Audio file">GameOverSelect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="238115294210373" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="572099071472369" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="915620340784536">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="460811371378088" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="828303326486683" type="Áudio">
+                    <param id="0" name="Audio file">GameOverSelect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="403583554661544" type="GameOverYes">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="940334867000259" type="GameOverNo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="405024965595457">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="894731620625413" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="984556656265912" type="GameOverYes" />
+                <condition id="-9" inverted="1" name="Is visible" sid="354153031402751" type="GameOverNo" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="603094167689774" type="Áudio">
+                    <param id="0" name="Audio file">GameOverSelect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="329631092832279" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="451409570836943" type="System">
+                    <param id="0" name="Layout">Fase 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="403468084938271">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="161993345700942" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="200896701834096" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="0" name="Play" sid="970387242554608" type="Áudio">
+                    <param id="0" name="Audio file">GameOverSong</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
